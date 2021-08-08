@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 set -e
 
-TAG='v5.13.8-arch1'
+TAG='v5.13.9-arch1'
 
 download() {
     echo "Downloading $1"
