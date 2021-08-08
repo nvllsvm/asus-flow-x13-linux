@@ -1,20 +1,16 @@
-#!/bin/sh
+#!/usr/bin/env sh
+set -e
 
-#blacklist nouveau
-echo "blacklist nouveau" >  /etc/modprobe.d/asus-flow-x13-nouveau.conf
-echo "alias nouveau off" >> /etc/modprobe.d/asus-flow-x13-nouveau.conf
+TAG='v5.13.8-arch1'
 
-#persist using udev rule
-echo '#nvidia dGPU' > /etc/udev/rules.d/99-asus-flow-power.rules
-echo 'ACTION=="add", SUBSYSTEM=="pci", TEST=="power/control", ATTR{vendor}=="0x10de", ATTR{power/control}="auto"' >> /etc/udev/rules.d/99-asus-flow-power.rules
+download() {
+    echo "Downloading $1"
+    mkdir -p "$(dirname "$1")"
+    curl -s -L "https://raw.githubusercontent.com/archlinux/linux/${TAG}/$1" -o ./"$1"
+}
 
-#ssd
-echo "\n#ssd" >> /etc/udev/rules.d/99-asus-flow-power.rules
-echo 'ACTION=="add", SUBSYSTEM=="pci", DRIVER=="nvme", TEST=="power/control", ATTR{power/control}="auto"' >> /etc/udev/rules.d/99-asus-flow-power.rules
+rm -rf sound
+download sound/pci/hda/patch_realtek.c
+patch -u -b sound/pci/hda/patch_realtek.c -i patches/sound.patch
 
-udevadm control --reload
-
-#install patched keyboard module
 sudo dkms install .
-
-echo "Please reboot"

@@ -1,0 +1,7 @@
+*
+!/.gitignore
+!/Makefile
+!/dkms.conf
+!/install.sh
+!/patches
+!/uninstall.sh
