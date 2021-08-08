@@ -1,0 +1,21 @@
+diff -u -r a/dsdt.dsl b/dsdt.dsl
+--- a/dsdt.dsl	2021-08-08 19:49:14.483023869 -0400
++++ b/dsdt.dsl	2021-08-08 19:51:09.333019878 -0400
+@@ -18,7 +18,7 @@
+  *     Compiler ID      "INTL"
+  *     Compiler Version 0x20190509 (538510601)
+  */
+-DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072009)
++DefinitionBlock ("", "DSDT", 2, "ALASKA", "A M I ", 0x01072010)
+ {
+     External (_SB_.ALS_, DeviceObj)
+     External (_SB_.ALS_.LUXL, UnknownObj)
+@@ -3117,7 +3117,7 @@
+         Zero, 
+         Zero
+     })
+-    Name (XS3, Package (0x04)
++    Name (_S3, Package (0x04)
+     {
+         0x03, 
+         Zero, 

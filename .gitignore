@@ -2,6 +2,7 @@
 !/.gitignore
 !/Makefile
 !/dkms.conf
+!/dsdt_bios_v407.dsl.patch
 !/install.sh
 !/patches
 !/uninstall.sh
