@@ -11,6 +11,6 @@ download() {
 
 rm -rf sound
 download sound/pci/hda/patch_realtek.c
-patch -u -b sound/pci/hda/patch_realtek.c -i patches/sound.patch
+patch -u -B -b sound/pci/hda/patch_realtek.c -i patches/sound.patch
 
 sudo dkms install .
