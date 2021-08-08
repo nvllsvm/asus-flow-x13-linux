@@ -1,5 +1,5 @@
-# Sound fix for Arch Linux on Asus Flow X13
-Fixes sound output in Arch Linux on the Asus Flow X13.
+# Arch Linux on Asus Flow X13
+Fixes and tweaks for running Arch Linux on the Asus Flow X13 laptop.
 
 ## Usage
 ### Installation
