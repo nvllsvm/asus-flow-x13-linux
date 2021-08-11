@@ -1,6 +1,6 @@
 diff -u -r a/dsdt.dsl b/dsdt.dsl
---- a/dsdt.dsl	2021-08-08 19:49:14.483023869 -0400
-+++ b/dsdt.dsl	2021-08-08 19:51:09.333019878 -0400
+--- a/dsdt.dsl	2021-08-11 18:51:41.132545981 -0400
++++ b/dsdt.dsl	2021-08-11 18:54:51.855873888 -0400
 @@ -18,7 +18,7 @@
   *     Compiler ID      "INTL"
   *     Compiler Version 0x20190509 (538510601)
@@ -19,3 +19,27 @@ diff -u -r a/dsdt.dsl b/dsdt.dsl
      {
          0x03, 
          Zero, 
+@@ -11886,11 +11886,6 @@
+ 
+     Scope (_SB.PCI0.GP17.XHC0)
+     {
+-        Method (_S0W, 0, NotSerialized)  // _S0W: S0 Device Wake State
+-        {
+-            Return (0x03)
+-        }
+-
+         Device (RHUB)
+         {
+             Name (_ADR, Zero)  // _ADR: Address
+@@ -12102,11 +12097,6 @@
+ 
+     Scope (_SB.PCI0.GP17.XHC1)
+     {
+-        Method (_S0W, 0, NotSerialized)  // _S0W: S0 Device Wake State
+-        {
+-            Return (0x03)
+-        }
+-
+         Device (RHUB)
+         {
+             Name (_ADR, Zero)  // _ADR: Address
