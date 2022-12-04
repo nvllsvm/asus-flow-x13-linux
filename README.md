@@ -10,3 +10,9 @@ Use [RU.EFI](http://ruexe.blogspot.com/) to modify the following UEFI variable:
 **After**
 ![After - S3 Suspend Enabled](uefi_variable_s3_suspend_enabled.jpg)
 
+## Disabling boot logo animation
+Why? It seems to *slightly* speed up boot times (I also despise the cheesy gamer branding).
+
+Use [RU.EFI](http://ruexe.blogspot.com/) to modify the following UEFI variable:
+
+![Goodbye Anustek](disable_boot_animation.jpg)
