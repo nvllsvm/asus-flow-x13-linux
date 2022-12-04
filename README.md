@@ -1,7 +1,7 @@
 # Arch Linux on Asus Flow X13
 Fixes and tweaks for running Arch Linux on the Asus Flow X13 laptop.
 
-#### Enabling S3 by modifying hidden UEFI setting
+## Enabling S3 by modifying hidden UEFI setting
 Use [RU.EFI](http://ruexe.blogspot.com/) to modify the following UEFI variable:
 
 **Before**
@@ -10,7 +10,7 @@ Use [RU.EFI](http://ruexe.blogspot.com/) to modify the following UEFI variable:
 **After**
 ![After - S3 Suspend Enabled](uefi_variable_s3_suspend_enabled.jpg)
 
-#### Enabling S3 by patching ACPI DSDT
+## Enabling S3 by patching ACPI DSDT
 ⚠ Leaving these here for informational purposes. You should try modifying the hidden UEFI setting instead.
 
 ```
