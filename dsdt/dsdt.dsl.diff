@@ -1,0 +1,104 @@
+8c8
+<  * Disassembly of gv301qe_bios_v413_modern_standy_enabled.dsdt, Sun Dec  4 18:41:27 2022
+---
+>  * Disassembly of gv301qe_bios_v413_s3_enabled.dsdt, Sun Dec  4 18:41:21 2022
+14c14
+<  *     Checksum         0x3C
+---
+>  *     Checksum         0xB4
+538c538
+<     Name (SS3, Zero)
+---
+>     Name (SS3, One)
+2192c2192
+<                 Method (RHRW, 0, NotSerialized)
+---
+>                 Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
+2221c2221
+<                 Method (RHRW, 0, NotSerialized)
+---
+>                 Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
+2255c2255
+<                 Method (RHRW, 0, NotSerialized)
+---
+>                 Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
+2284c2284
+<                 Method (RHRW, 0, NotSerialized)
+---
+>                 Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
+2464c2464
+<                     Method (RHRW, 0, NotSerialized)
+---
+>                     Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
+2478c2478
+<                     Method (RHRW, 0, NotSerialized)
+---
+>                     Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
+2527c2527
+<                 Method (RHRW, 0, NotSerialized)
+---
+>                 Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
+2556c2556
+<                 Method (RHRW, 0, NotSerialized)
+---
+>                 Method (_PRW, 0, NotSerialized)  // _PRW: Power Resources for Wake
+3070c3070
+<         Method (XL08, 0, NotSerialized)
+---
+>         Method (_L08, 0, NotSerialized)  // _Lxx: Level-Triggered GPE, xx=0x00-0xFF
+3079c3079
+<         Method (XL0D, 0, NotSerialized)
+---
+>         Method (_L0D, 0, NotSerialized)  // _Lxx: Level-Triggered GPE, xx=0x00-0xFF
+3085c3085
+<         Method (XL0F, 0, NotSerialized)
+---
+>         Method (_L0F, 0, NotSerialized)  // _Lxx: Level-Triggered GPE, xx=0x00-0xFF
+3091c3091
+<         Method (XL0E, 0, NotSerialized)
+---
+>         Method (_L0E, 0, NotSerialized)  // _Lxx: Level-Triggered GPE, xx=0x00-0xFF
+3097c3097
+<         Method (XL19, 0, NotSerialized)
+---
+>         Method (_L19, 0, NotSerialized)  // _Lxx: Level-Triggered GPE, xx=0x00-0xFF
+3123c3123
+<     Name (XS3, Package (0x04)
+---
+>     Name (_S3, Package (0x04)  // _S3_: S3 System State
+13648c13648
+<             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+---
+>             Method (RHRS, 0, NotSerialized)
+13665c13665
+<                 Return (RBUF) /* \_SB_.PCI0.GPP2._CRS.RBUF */
+---
+>                 Return (RBUF) /* \_SB_.PCI0.GPP2.RHRS.RBUF */
+13677c13677
+<             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+---
+>             Method (RHRS, 0, NotSerialized)
+13694c13694
+<                 Return (RBUF) /* \_SB_.PCI0.GPP3._CRS.RBUF */
+---
+>                 Return (RBUF) /* \_SB_.PCI0.GPP3.RHRS.RBUF */
+13705c13705
+<             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+---
+>             Method (RHRS, 0, NotSerialized)
+13722c13722
+<                 Return (RBUF) /* \_SB_.PCI0.GPP4._CRS.RBUF */
+---
+>                 Return (RBUF) /* \_SB_.PCI0.GPP4.RHRS.RBUF */
+13813c13813
+<             Name (_PR0, Package (0x01)  // _PR0: Power Resources for D0
+---
+>             Name (NPR0, Package (0x01)
+13817c13817
+<             Name (_PR2, Package (0x01)  // _PR2: Power Resources for D2
+---
+>             Name (NPR2, Package (0x01)
+13821c13821
+<             Name (_PR3, Package (0x01)  // _PR3: Power Resources for D3hot
+---
+>             Name (NPR3, Package (0x01)
