@@ -2,6 +2,9 @@
 Fixes and tweaks for running Arch Linux on the Asus Flow X13 laptop.
 
 ## Enabling S3 by modifying hidden UEFI setting
+⚠ While this enables S3, I experience frequent amdgpu driver crashes when resuming from suspend.
+Still experiencing this as of kernel 6.0.11. I also experienced the same kind of crash with DSDT patching.
+
 Use [RU.EFI](http://ruexe.blogspot.com/) to modify the following UEFI variable:
 
 **Before**
